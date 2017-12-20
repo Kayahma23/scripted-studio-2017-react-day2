@@ -5,8 +5,18 @@
 //Part Two: Add a delete button to each list element.
 
 function List(props) {
-    //TODO: Create list from props.
-    return (<ul>
+  //TODO: Create list from props.
+  return (<ul>
+    {
+    props.items.map(function(item,index){
+      return
+      
+      (<li>
+       {item}
+      </li>);
+        
+      })
+    }
     </ul>);
 };
 
@@ -14,14 +24,15 @@ var App = React.createClass({
   getInitialState: function() {
     //TODO: Set the initial state.
     return {
-        
+      term: '',
+      items: ["cookie", " cookies"]
     };
   },
   onChange: function(event) {
     //TODO: Save current value in input field.
   },
   onSubmit: function(event) {
-      //TODO: Add to list.
+    //TODO: Add to list.
   },
   render: function() {
     //TODO: Add event handlers to input and button.
